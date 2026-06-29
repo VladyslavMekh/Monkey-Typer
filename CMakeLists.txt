@@ -7,7 +7,7 @@ include(FetchContent)
 FetchContent_Declare(
         SFML
         GIT_REPOSITORY https://github.com/SFML/SFML.git
-        GIT_TAG 3.0.1
+        GIT_TAG 3.1.0
         GIT_SHALLOW ON
         EXCLUDE_FROM_ALL
         SYSTEM
@@ -27,5 +27,7 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(Monkey_Typer
         src/main.cpp
+        include/ui/panels.hpp
+        src/ui/panels.cpp
 )
 target_link_libraries(Monkey_Typer PRIVATE SFML::Graphics fmt::fmt)
